@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -10,9 +9,15 @@ import (
 // WebServer
 func WebServer() {
 	r := gin.Default()
+	r.LoadHTMLGlob("templates/*")
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{
 			"message": "OK",
+		})
+	})
+	r.GET("/index", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"title": "test",
 		})
 	})
 	r.Run(":8888")
@@ -20,6 +25,7 @@ func WebServer() {
 
 // main
 func main() {
-	fmt.Println("test")
-	fmt.Println("test")
+	// fmt.Println("test")
+	// fmt.Println("test")
+	WebServer()
 }

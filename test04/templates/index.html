@@ -1,0 +1,35 @@
+<html>
+    <h1>测试Selinum</h1>
+    <form>
+        <input type="text" id="textEdit" />
+        <select id="s1">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <textarea cols="100" rows="30" id="ta1">
+server {
+    listen 8080;
+    server_name www.baidu.com;
+    location / {
+        proxy_pass http://xxx.com;
+    }
+    location /url {
+        proxy_pass http://xxx.com;
+    }
+}
+
+server {
+    listen 443;
+    ssl on;
+    server_name www.baidu.com;
+    location / {
+        proxy_pass http://xxx.com;
+    }
+    location /testssl {
+        proxy_pass http://xxx.com;
+    }
+}
+</textarea>
+    </form>
+</html>
