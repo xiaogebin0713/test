@@ -3,6 +3,33 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.chrome.options import Options
 import re
+import json
+
+def analysis(str1):
+    str_arg = str1.split("\n")
+    flg = 0   # 初始化标识符
+    # 参数
+    params = {}
+    unit = ""
+    for line in str_arg:
+        if re.match("^\s*#.*", line):
+            continue
+        line = line.strip()
+        # 读取单元
+        ret = re.match("^\[([^\[\]]*)\]$", line)
+        if ret:
+            # 获取到单元的标识符
+            unit = ret.group(1)
+            params[unit] = []
+            flg = 1
+            print("unit:", unit)
+            continue
+            
+        if flg == 1 and line is not None:
+            # 如果获取到标识符则添加参数到数组
+            params[unit].append(line)
+    return params
+
 
 def insert_str(text, containString, insertString):
     """
@@ -10,31 +37,16 @@ def insert_str(text, containString, insertString):
     """
     list_text = text.split("\n")
     cut_space_list_text = [i.strip() for i in list_text]
-    # print(cut_space_list_text)
     index = 0
-    # if insertString in cut_space_list_text:
-    #     print("已经存在了")
-    #     exit(1)
     if containString == "server":
         flg = 0
         flg1 = 0
-        # for line in list_text:
-        #     if line.strip() == insertString.strip():
-        #         print("fffffffffffff_server")
-        #         continue
         for line in list_text:
-            # if line.strip() == insertString.strip():
-            #     print(line.strip())
-            #     print("yes")
-            #     index = index + 1
-            #     continue
-                # continue
             if flg == 1:
                 flg = 0
                 index = index + 1
                 continue
             if re.match("server\s*{", line):   # 如果是server\s*{}
-                # print("server.............")
                 flg1 = 1
             if flg1 == 1:
                 if line.strip() == insertString.strip():
@@ -92,35 +104,16 @@ s.select_by_visible_text("3")
 ta1 = wd.find_element_by_id("ta1")
 text = ta1.text
 
-# text = insert_str(text, "location", "proxy_pass www.baidu.com;")
-text = insert_str(text, "location", "client_max_body_size 1m;")
-text = insert_str(text, "location", "client_max_body_size 1m;")
-params = [
-    'gzip on;',
-    'gzip_min_length 2k;',
-    'gzip_buffers   4 32k;',
-    'gzip_http_version 1.1;',
-    'gzip_comp_level 6;',
-    'gzip_typestext/plain text/css text/javascriptapplication/json application/javascript application/x-javascriptapplication/xml;',
-    'gzip_vary on;',
-    'gzip_proxied any;',
-]
+comment = wd.find_element_by_id("comment").text
+print(comment)
+params = analysis(comment)             # 把内容解析成字典
 
-for p in params:
-    text = insert_str(text, "location", p)
+
+for k, v in params.items():
+    for i in v:
+        i = i.strip()
+        print("i:", i)
+        if i != "":
+            text = insert_str(text, k, i)
 
 wd.execute_script('document.getElementById("ta1").value = "%s"' % text.replace("\n", "\\n"))
-# element = wd.find_element_by_css_selector('li a[href="//www.mi.com/p/9289.html"]')
-# ac = ActionChains(wd)
-# ac.move_to_element(element).perform()
-# element = wd.find_element_by_xpath('//span[@class="text"][text()="小米手表"]/../img')
-# print(element.get_attribute("outerHTML"))
-# ac.click(element).perform()
-# selectOption = ["促销 "]
-# wd.maximize_window()
-# for s in selectOption:
-#     checkbox = wd.find_element_by_xpath('//a[contains(., "%s")]' % s)
-#     checkbox.click()
-#     print(checkbox.get_attribute("outerHTML"))
-
-# pass
