@@ -1,0 +1,54 @@
+<mxfile host="app.diagrams.net" modified="2023-12-22T06:35:08.084Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="B-6acZkySDjVoJ4JpXIh" version="22.1.11" type="github">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
+    <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-0" target="xMiS9Zxfq99uhFpLM0rj-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-0" value="client" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="110" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-1" target="xMiS9Zxfq99uhFpLM0rj-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-5" value="frp连接" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="xMiS9Zxfq99uhFpLM0rj-4" vertex="1" connectable="0">
+          <mxGeometry x="-0.025" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-1" value="docker (ubuntu)&lt;br&gt;A:3306" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="280" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-3" target="xMiS9Zxfq99uhFpLM0rj-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-3" value="213服务器&lt;br&gt;B(3307)" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="480" y="270" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=1;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-6" target="xMiS9Zxfq99uhFpLM0rj-1" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-6" target="xMiS9Zxfq99uhFpLM0rj-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-6" value="端口映射，把A的端口映射到B的端口&lt;br&gt;A:3306-&amp;gt;B:3307" style="whiteSpace=wrap;html=1;rounded=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="480" y="410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-8" value="213服务器存放天健测试环境的数据库备份" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_1;align=left;pointerEvents=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="630" y="250" width="50" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-11" value="通过jenkins的job执行还原命令，把备份文件导到A:3306（mysql）" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="480" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="xMiS9Zxfq99uhFpLM0rj-13" target="xMiS9Zxfq99uhFpLM0rj-11" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xMiS9Zxfq99uhFpLM0rj-13" value="执行jenkins备份数据库命令，备份天健测试环境" style="rounded=0;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="480" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
