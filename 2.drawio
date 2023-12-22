@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2023-12-22T07:14:01.713Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="vtT3ttQSj0dpFeBnS4XO" version="22.1.11" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-22T07:16:02.551Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="TWe3s-RuAlTYr8YDwPFX" version="22.1.11" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="7zfjWZ3S8a0Srfy_rYdF-66" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry y="1520" width="810" height="680" as="geometry" />
+          <mxGeometry x="11" y="1520" width="810" height="680" as="geometry" />
         </mxCell>
         <mxCell id="7zfjWZ3S8a0Srfy_rYdF-65" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="10" y="650" width="810" height="680" as="geometry" />
@@ -151,16 +151,13 @@
           <mxGeometry x="160" y="1770" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7zfjWZ3S8a0Srfy_rYdF-52" value="注意事项：&lt;br&gt;&lt;br&gt;1. 用户需要自行配置vpn客户端&lt;br&gt;&lt;br&gt;2. 需要购买vpn服务、或自建vpn服务" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="10" y="2040" width="340" height="140" as="geometry" />
+          <mxGeometry x="35" y="2040" width="340" height="140" as="geometry" />
         </mxCell>
         <mxCell id="7zfjWZ3S8a0Srfy_rYdF-53" value="方案三" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="10" y="1630" width="120" height="60" as="geometry" />
+          <mxGeometry x="50" y="1640" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="7zfjWZ3S8a0Srfy_rYdF-54" value="内部网络" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="670" y="1710" width="70" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="7zfjWZ3S8a0Srfy_rYdF-63" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="350" y="300" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
